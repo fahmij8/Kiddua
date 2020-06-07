@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="dicoding:email" content="rootmawar77@gmail.com">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+	<title>PKM PKM CLEUB</title>
+	<meta name="description" content="Description Here"/>
+	<link rel="stylesheet" type="text/css" href="../css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="../css/improvement.css">
+	<link rel="shortcut icon" href="../images/favicon.png">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+	<meta name="theme-color" content="#1E1330"/>
+</head>
+<body>
+	<!-- Preloader -->
+    <div class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+	<div class="mobile-content">
+		<div class="header-content">
+			<div class="container">
+				<div class="row">
+					<br><br>
+					<div class="col s2">
+						<a class="btn-floating btn-medium waves-effect waves-light neumorph-pc" href="../doa-1.html"><i class="far fa-chevron-left"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col s6">
+					<div class="playcard unselected" id="sam1" onclick="clicked(sam1);checkAnswer();">
+						<h5>Dengan menyebut nama-Mu</h5>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="playcard unselected" id="sam2" onclick="clicked(sam2);checkAnswer();">
+						<h5 class="arabic" style="text-align: center;">بِسْمِكَ</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="playcard unselected" id="sam3" onclick="clicked(sam3);checkAnswer();">
+						<h5>Yaa Allah</h5>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="playcard unselected" id="sam4" onclick="clicked(sam4);checkAnswer();">
+						<h5 class="arabic" style="text-align: center;">اللّهُمَّ</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="playcard unselected" id="sam5" onclick="clicked(sam5);checkAnswer();">
+						<h5>Aku hidup</h5>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="playcard unselected" id="sam6" onclick="clicked(sam6);checkAnswer();">
+						<h5 class="arabic" style="text-align: center;">اَحْيَا</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="playcard unselected" id="sam7" onclick="clicked(sam7);checkAnswer();">
+						<h5>Aku mati</h5>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="playcard unselected" id="sam8" onclick="clicked(sam8);checkAnswer();">
+						<h5 class="arabic" style="text-align: center;">وَ اَمُوْتُ</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fixed-action-btn toolbar">
+		    <a class="btn-floating btn-large purple darken-3 pulse" onclick="changeColor()">
+		        <i class="far fa-bars"></i>
+		    </a>
+		    <ul>
+		        <li class="waves-effect waves-light"><a href="../index.html" onclick="colorChange()"><i id="text-color2" class="fad fa-home fa-2x fa-swap-opacity transparent-text"></i></a></li>
+		        <li class="waves-effect waves-light"><a href="#modal1" class="modal-trigger" onclick="colorChange()"><i id="text-color3" class="fad fa-question-circle fa-2x transparent-text"></i></a></li>
+		        <li class="waves-effect waves-light"><a href="#!" onclick="colorChange()"><i id="text-color4" class="far fa-undo-alt fa-2x transparent-text"></i></a></li>
+		    </ul>
+		</div>
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4>Petunjuk bermain</h4>
+		      	<p>Cocokkan antara bahasa arab dengan artinya ya!</p>
+		      	<p>Kamu akan mendapatkan tanda warna hijau, berarti benar</p>
+		      	<p>dan tanda warna merah, berarti salah</p>
+		      	<p>Selamat bermain!</p>
+		    </div>
+		    <div class="modal-footer">
+		    	<a href="#!" class="modal-close waves-effect waves-green btn-flat">OKE!</a>
+		    </div>
+		</div>
+	</div>
+	<!-- Restriction -->
+	<div class="restrict-content">
+		<div class="container">
+			<h1>You're device screen is incompatible with our Web-Apps, please move to more smaller device.</h1>
+			<h4>contact admin : <a href="mailto:fahmijabbar@upi.edu">fahmijabbar@upi.edu</a></h4>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/install.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/game.js"></script>
+</html>

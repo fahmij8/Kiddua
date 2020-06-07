@@ -1,0 +1,291 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing:400|Trykker:400|Amiri:400');
+
+/*screen differentiatior*/
+@media screen and (max-width: 600px){
+	.restrict-content{
+		display: none;
+	}
+	.mobile-content{
+		max-width: 600px;
+	}
+	body {
+		background-color: #1E1330;
+		height: 100%;
+	}
+}
+
+@media screen and (min-width: 600px){
+	.restrict-content{
+		display: block;
+		font-family: Trykker, serif;
+	}
+	.mobile-content{
+		display: none;
+	}
+}
+
+/*item css*/
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  margin-bottom: -40px;
+}
+
+.top-img{
+	width: 100%;
+	height: 250px;
+}
+
+.main-menu{
+	color:#fff;
+	border-radius: 50px 50px 0px 0px;
+	position: absolute;
+	top: 251px;
+	bottom: 0;
+	background-color: #3c2764;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	height: 65vh;
+}
+
+.main-title{
+	color: #fff;
+	background: #3c2764;
+	background-color: #ffffff00;
+	text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+	font-size: 10vw;
+	font-family: Trykker, serif;
+	margin: 2vh auto 6vh;
+	text-align: center;
+}
+
+.doa-title{
+	color: #fff;
+	background: #3c2764;
+	background-color: #ffffff00;
+	text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+	font-size: 6vw;
+	font-family: Trykker, bold;
+	font-weight: 600;
+	margin: 2vh auto 6vh;
+	text-align: center;
+	padding-bottom: 5vw
+}
+
+.responsive-img{
+	width: 90%;
+	height: 90%;
+	margin:auto;
+	display: block;
+	margin-top: 10px;
+}
+
+.menu-item{
+	text-align: center;
+	margin-bottom: 5px;
+	border-radius: 25px;
+	background: linear-gradient(145deg, #36235a, #402a6b);
+	box-shadow:  20px 20px 60px #332155, -20px -20px 60px #452d73;
+	height: auto;
+	width: auto;
+}
+
+.menu-item h2{
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.main-menu a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.daftar-doa {
+	color: #fff;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: url("../images/daftar-bg.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	height: 88px;
+	border-radius: 25px;
+	background-color: #1E1330;
+	box-shadow:  5px 5px 10px #0c0813, -5px -5px 10px #301e4d;
+}
+
+.daftar-doa h3{
+	font-size: 5vw;
+	margin:0 0;
+	line-height: 88px;
+}
+
+.daftar-latihan {
+	color: #fff;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-image: url("../images/latihan-bg.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	height: 88px;
+	border-radius: 25px;
+	background-color: #1E1330;
+	box-shadow:  5px 5px 10px #0c0813, -5px -5px 10px #301e4d;
+}
+
+.daftar-latihan h3{
+	font-size: 5vw;
+	margin:0 0;
+	line-height: 88px;
+}
+
+.doa-content {
+	color: #fff;
+	text-align: right;
+}
+
+.lat-content{
+	color: #fff;
+}
+
+.arabic {
+	background-color: #ffffff00;
+	border-color: #ffffff00;
+	color: #fff;
+	font-size: 10vw;
+	font-family: Amiri, serif;
+	width: auto;
+	padding: 0;
+	white-space: nowrap;
+	font-weight: 100;
+}
+
+.arabic:active {
+	background-color: #ffffff00;
+}
+
+button:focus {
+	background-color: #ffffff00;
+}
+
+.makna {
+	text-align:right;
+	width: auto;
+	margin-right: 0;
+	padding: 0;
+	word-wrap: break-word;
+	color: #fff;
+}
+
+.tableset {
+	table-layout: fixed;
+
+}
+
+.source-doa {
+	text-align: left;
+}
+
+
+.neumorph-pb {
+	background-color: #1E1330;
+	box-shadow:  5px 5px 10px #0c0813, -5px -5px 10px #301e4d;
+}
+
+.neumorph-pc {
+	background: #1E1330;
+	box-shadow:  5px 5px 10px #0c0813, -5px -5px 10px #301e4d;
+}
+
+.playcard {
+	border-radius: 25px;
+	background-color: #1E1330;
+	box-shadow:  5px 5px 10px #0c0813, -5px -5px 10px #301e4d;
+	color: #fff;
+	border: 10px solid #ffffff00;
+}
+
+.playcard h5 {
+	font-size: 4vw;
+	margin: 0;
+	padding: 10px 10px;
+	text-align: center;
+}
+
+.correct {
+	border: 10px solid #3bcf5e;
+}
+
+.incorrect {
+	border: 10px solid #f53e35;
+}
+
+.selected {
+	border: 10px solid #6a1b9a;
+}
+
+.unselected {
+	border: 10px solid #ffffff00;
+}
+
+.selected h5{
+	padding: 10px 10px;
+	margin: 0;
+}
+
+.pertanyaan-lat{
+	color: #fff;
+	background: #3c2764;
+	background-color: #ffffff00;
+	text-shadow: 3px 2px 3px rgba(255,255,255,.2);
+	font-size: 4vw;
+	font-family: Trykker, bold;
+	font-weight: 600;
+	text-align: left;
+}
+
+.arab-lat{
+	background-color: #ffffff00;
+	border-color: #ffffff00;
+	color: #fff;
+	font-size: 6vw;
+	font-family: Amiri, serif;
+	font-weight: 100;
+}
+
+.pilihan-lat {
+	font-family: Trykker, bold;
+	font-size: 4vw;
+}
+
+.spec-button {
+	width: 17vw;
+	height: 7vw;
+	padding: 0 0;
+	font-size: 3vw;
+	line-height: 7vw;
+}
+
+.spec-button i{
+	font-size: 3vw;
+	padding: 0 0;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+		
+    }
+    #wrapper{
+        display:flex;
+		width: 60%;
+		height: 95vh;
+		flex: 1 1 0;
+		border: 3px solid greenyellow;
+		justify-content: space-around;
+		margin: 0 auto;
+		padding-left: 13vw;
+    }
+    #images{
+        display: flex;
+        width: 7vw;
+        flex-direction: column;
+        /*border: 1px solid red;*/
+		justify-content: space-between;
+    }
+    img{
+       border: 1px solid green;
+	   width: 7vw;
+	   height: 6vw;
+	   
+    }
+    #names{
+        display: flex;
+        flex-direction: column;
+        width: 7vw;
+		height: 100%;
+		justify-content: space-between;
+    }
+	
+	#watermelon{
+		margin-top: 0;
+		
+	}
+	
+	 #raspberries{
+		margin-bottom: 0;
+	 }
+	 
+    #names p{
+        
+		border: 1px solid green;
+		height: 6vw;
+		text-align: center;
+		line-height: 5vw;
+		color: Red;
+		font-weight: 500;
+		font-size: 1.1vw;
+		background-color: #ddd;
+		margin: 0;
+	}
+	#drop{
+		position: absolute;
+		top: 45vh;
+		left: 5vw;
+		transform: rotate(-90deg);
+		font-size: 1.6vw;
+		font-weight: bold;
+		color: rgb(116, 35, 35);
+		border: 2px dotted gold;
+	}
+
+	@media only screen and (orientation: portrait) {
+		#wrapper{
+			width: 100%;
+			height: 80vh;
+		}
+		
+		#images {
+			width: 7vh;
+			
+		}
+		img{
+			width: 7vh;
+			height: 6vh;
+		}
+		#names{
+       		width: 7vh;
+			height: 100%;
+		}
+		#names p{
+        	height: 6vh;
+		}
+		#drop{
+			top: 38vh;
+			left: -8vh;	
+		}
+	}
+    </style>
+</head>
+<body>
+     <div id="wrapper">
+        <div id="images">
+            <img id="raspberries2" src="Fruits/Raspberries.jpeg">
+            <img id="kiwi2" src="Fruits/Kiwi.jpeg">
+            <img id="strawberry2" src="Fruits/strawberry.jpeg">
+            <img id="grapes2" src="Fruits/White Grapes.jpeg">
+            <img id="watermelon2" src="Fruits/watermelon.jpeg">
+            <img id="tomato2" src="Fruits/Tomato.jpeg">
+        </div>   
+
+        <div id="names">
+			<div id="watermelon">
+            <p>Watermelon</p>
+			</div>
+			<div id="kiwi">
+            <p>Kiwi</p>
+			</div>
+			<div id="strawberry">
+            <p>Strawberry</p>
+			</div>
+			<div id="grapes">
+            <p>Grapes</p>
+			</div>
+			<div id="tomato">
+            <p>Tomato</p>
+			</div>
+			<div id="raspberries">
+            <p>Raspberries</p>
+			</div>
+		</div>  
+		
+		<div id="display">
+
+		</div>
+		<div id="drop">
+			<p>Drag and Drop the images to their corresponding words</p>
+		</div>
+        
+    </div>
+
+        
+		<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="jquery.ui.touch-punch.js"></script>
+        <script>
+    
+            $(document).ready(function(){
+					let count = 0;
+					let audio = document.createElement('audio')
+					
+					function playAudio(){
+						audio.src = 'audio/Cheering.mp3'
+						audio.play()
+					}
+						
+					function playSnap(){
+						audio.src = 'audio/snaps-01.wav'
+						audio.play()
+					}
+
+					function playError(){
+						audio.src = 'audio/autistic__error.wav'
+						audio.play()
+					}
+					
+					function displayResult(arg){
+					
+						let display = $('#display');
+						if(arg == 6){
+							playAudio();	
+							display.html(`<p style="color: green; text-align: center; font-weight: bold">Brilliant! <br/> You've successfully matched all the fruits</p>`).dialog({width:200,resizeable:false, modal: true});
+						}else{
+							playSnap();
+						}
+					}
+    	
+					$('img').draggable({
+						helper: 'clone',
+						revert: function(isValid){	
+								if(!isValid){
+									playError();
+                   					return true;
+               					} 
+							}			
+					})
+
+					$('#names div').droppable({
+						accept: function(e){
+						let container = this.id + 2
+							
+							if(e.attr("id")== container){			
+								return true
+							}										
+						},
+
+						drop: function(event, ui){
+							//console.log(event.target.id)
+							$(this).replaceWith(ui.draggable)
+							count++
+							displayResult(count)	
+						}
+						
+					})			
+            })	
+        </script>
+</body>
+</html>

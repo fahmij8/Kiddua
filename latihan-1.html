@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="dicoding:email" content="rootmawar77@gmail.com">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+	<title>PKM PKM CLEUB</title>
+	<meta name="description" content="Description Here"/>
+	<link rel="stylesheet" type="text/css" href="./css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="./css/improvement.css">
+	<link rel="shortcut icon" href="./images/favicon.png">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+	<meta name="theme-color" content="#1E1330"/>
+</head>
+<body>
+	<!-- Preloader -->
+    <div class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+	<div class="mobile-content">
+		<div class="header-content">
+			<div class="container">
+				<div class="row">
+					<br><br>
+					<div class="col s2">
+						<a class="btn-floating btn-medium waves-effect waves-light neumorph-pc" href="./daftar-latihan.html"><i class="far fa-chevron-left"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container lat-content">
+			<h1 class="pilihan-lat">1. Perhatikan do'a berikut ini!</h1>			
+			<p class="right-align arab-lat"><i class="pink-text">بِسْمِكَ </i>اللّهُمَّ اَحْيَا وَ بِسْمِكَ اَمُوْتُ</p>
+			<h2 class="pilihan-lat">Apakah arti kata yang berwarna merah</h2>
+			<p>
+			<label>
+				<input name="group1" type="radio" id="answer-true"/>
+				<span class="white-text pilihan-lat">Dengan menyebut nama-Mu</span>
+			</label>
+			</p>
+			<p>
+			<label>
+			    <input name="group1" type="radio" id="answer-false"/>
+			    <span class="white-text pilihan-lat">Tidur</span>
+			</label>
+			</p>
+			<a class="waves-effect waves-light btn purple lighten-2 spec-button" onclick="checkanswer()"><i class="fad fa-paper-plane"></i>  Cek</a>
+		</div>
+	</div>
+
+	<!-- Restriction -->
+	<div class="restrict-content">
+		<div class="container">
+			<h1>You're device screen is incompatible with our Web-Apps, please move to more smaller device.</h1>
+			<h4>contact admin : <a href="mailto:fahmijabbar@upi.edu">fahmijabbar@upi.edu</a></h4>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="./js/materialize.js"></script>
+<script type="text/javascript" src="./js/install.js"></script>
+<script type="text/javascript">
+	let audio = document.createElement('audio')
+
+	var checkanswer = () => {
+		if (document.getElementById('answer-true').checked){
+			M.toast({html: 'Yeay betul!'});
+			audio.src = './games/audio/Cheering.mp3'
+			audio.play()
+		} else {
+			M.toast({html: 'Maaf, coba lagi..'});
+			audio.src = './games/audio/autistic__error.wav'
+			audio.play()
+		}
+	}
+</script>
+</html>
