@@ -43,8 +43,8 @@
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 250px;
-  margin-bottom: -40px;
+  height: 300px;
+  margin-top: -10px;
 }
 
 .top-img{
